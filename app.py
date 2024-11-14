@@ -17,6 +17,8 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+st.markdown("<div style='text-align: center; padding: 20px;'>渋谷のおすすめのお店の情報を学習させました。(例 渋谷のおすすめのバーを教えて・・・）　※随時、情報を更新中</div>", unsafe_allow_html=True)
+
 prompt = st.chat_input("Enter you question")
 
 if prompt:
